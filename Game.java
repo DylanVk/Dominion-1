@@ -16,8 +16,15 @@ public class Game {
 	}
 	
 	public void startGame(){
-		//players[0].addCard("copper");
-		//players[0].addCard("copper");
+		
+		for(int i=0;i<players.length;i++){
+			for(int j=0; j<7; j++){
+				players[i].addCard("copper");
+			}
+			for(int k=0; k<7; k++){
+				players[i].addCard("estate");
+			}
+		}
 		
 	}
 	

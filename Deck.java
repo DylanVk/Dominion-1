@@ -8,8 +8,8 @@ public class Deck {
 		initTestCards();
 	}
 	
-	public void drawCard(int numberOfCards){
-		
+	public void addCard(String cardName){
+		currentDeck.add(cardName);
 	}
 	
 	public void initTestCards(){
