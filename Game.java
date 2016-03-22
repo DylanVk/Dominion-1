@@ -16,7 +16,7 @@ public class Game {
 	}
 	
 	public void startGame(){
-		
+		//add starting decks to their respective players
 		for(int i=0;i<players.length;i++){
 			for(int j=0; j<7; j++){
 				players[i].addCard("copper");
