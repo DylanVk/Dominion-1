@@ -1,12 +1,16 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 
 public class Deck {
 	private ArrayList<Card> currentDeck;
+	private ArrayList<Card> currentHand;
 	private ArrayList<Card> allCards;
 	
 	public Deck(){
 		currentDeck = new ArrayList();
+		currentHand = new ArrayList();
+		drawCard(5);
 		allCards = new ArrayList();
 		initTestCards();
 	}
@@ -15,7 +19,14 @@ public class Deck {
 		//currentDeck.add(cardName);findArrayPosition(cardName);
 		int pos = findArrayPosition(cardName);
 		currentDeck.add(allCards.get(pos));
-
+	}
+	
+	public void drawCard(int numberOfCards){
+		
+	}
+	
+	private void shuffleDeck(){
+		Collections.shuffle(currentDeck);
 	}
 	
 	public int findArrayPosition(String cardName){
