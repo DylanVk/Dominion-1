@@ -1,18 +1,20 @@
+import java.util.ArrayList;
 
 public class Deck {
+	private ArrayList currentDeck;
+	
 	public Deck(){
-		
+		currentDeck = new ArrayList();
 	}
 	
-	public void drawCard(int numberOfCards){
-		
+	public void addCard(Card newCard) {
+		currentDeck.add(newCard);
 	}
 	
-	public void discardHand(){
-		
+	public Card drawCard(){
+		Card placeholder = new Card();
+		return placeholder;
 	}
 	
-	public void pickDiscards(){
-		
-	}
+
 }
