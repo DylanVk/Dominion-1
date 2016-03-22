@@ -13,14 +13,12 @@ public class Deck {
 		drawCard(5);
 		allCards = new ArrayList();
 		initTestCards();
+		
 	}
 	
 	public void addCard(String cardName){
-		//currentDeck.add(cardName);findArrayPosition(cardName);
-		int pos = findArrayPosition(cardName);
-		currentDeck.add(allCards.get(pos));
 		int itemPosistion = findArrayPosition(cardName);
-		currentDeck.add(allCards.get(itemPosistion));
+		currentDeck.add(allCards.get(itemPosistion));	
 	}
 	
 	public void drawCard(int numberOfCards){
@@ -57,6 +55,17 @@ public class Deck {
 		Card village = new Card(8,"village",1,"",3);
 		Card woodcutter = new Card(9,"woodcutter",1,"",3);
 		Card workshop = new Card(10,"workshop",1,"Gain a card costing up to 4 Coins.",3);	
+		
+		//Treasures Cards
+		Card copper = new Card(11,"copper",0,"",0);
+		Card silver = new Card(12,"silver",0,"",3);
+		Card gold = new Card(13,"gold",0,"",6);
+		
+		//victory cards
+		Card estate = new Card(14,"estate",0,"",2);
+		Card dutchy = new Card(15,"dutcht",0,"",5);
+		Card province = new Card(16,"province",0,"",8);
+		
 		allCards.add(cellar);
 		allCards.add(market);
 		allCards.add(militia);
@@ -67,6 +76,14 @@ public class Deck {
 		allCards.add(village);
 		allCards.add(woodcutter);
 		allCards.add(workshop);
+		allCards.add(workshop);
+		allCards.add(copper);
+		allCards.add(silver);
+		allCards.add(gold);
+		allCards.add(estate);
+		allCards.add(dutchy);
+		allCards.add(province);
+		
 		
 		
 	}
