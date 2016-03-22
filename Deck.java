@@ -5,16 +5,11 @@ public class Deck {
 	
 	public Deck(){
 		currentDeck = new ArrayList();
-		 initTestCards();
+		initTestCards();
 	}
 	
-	public void addCard(Card newCard) {
-		currentDeck.add(newCard);
-	}
-	
-	public Card drawCard(){
-		Card placeholder = new Card(2,"hoi",1,"test", 0);
-		return placeholder;
+	public void drawCard(int numberOfCards){
+		
 	}
 	
 	public void initTestCards(){

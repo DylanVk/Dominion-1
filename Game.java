@@ -1,16 +1,24 @@
 
 public class Game {
-	private Deck player1;
-	private Deck player2;
+	private Deck[] players;
 	
 	public Game() {
-		player1 = new Deck();
-		player2 = new Deck();
+		players[0] = new Deck();
+		players[1] = new Deck();
+		startGame();
 	}
 	
-	public void drawCards(int numberOfCards){
+	public Game(int numberOfPlayers) {
+		for(int i=0; i<numberOfPlayers; i++){
+			players[i] = new Deck();
+		}
+		startGame();
+	}
+	
+	public void startGame(){
+		//players[0].addCard("copper");
+		//players[0].addCard("copper");
 		
 	}
-	
 	
 }
