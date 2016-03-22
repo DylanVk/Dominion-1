@@ -10,10 +10,15 @@ public class Deck {
 	public Deck(){
 		currentDeck = new ArrayList();
 		currentHand = new ArrayList();
-		drawCard(5);
 		allCards = new ArrayList();
 		initTestCards();
 		
+		//Add Cards to currentDeck -- Testing purposes
+		for(int i=0;i<=6;i++){
+			currentDeck.add(allCards.get(i));
+		}
+		
+		drawCard(5);
 	}
 	
 	public void addCard(String cardName){
@@ -22,7 +27,12 @@ public class Deck {
 	}
 	
 	public void drawCard(int numberOfCards){
-		for(int i=currentDeck.size(); i<numberOfCards; i--){
+		
+		int deckSize = currentDeck.size() -1;
+		int min = deckSize-numberOfCards;
+		
+		//for(int i=currentDeck.size(); i<numberOfCards; i--){   --> wrong?
+		for(int i=deckSize; i>min; i--){
 			Card drawnCard = currentDeck.get(i);
 			currentHand.add(drawnCard);
 		}
