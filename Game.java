@@ -21,11 +21,13 @@ public class Game {
 		//add starting decks to their respective players
 		for(int i=0;i<players.length;i++){
 			for(int j=0; j<7; j++){
-				players[i].addCard("copper");
+				players[i].addCardToDeck("copper");
 			}
 			for(int k=0; k<3; k++){
-				players[i].addCard("estate");
+				players[i].addCardToDeck("estate");
 			}
+			players[i].shuffleDeck();
+			players[i].drawCard(5);
 		}
 		
 	}

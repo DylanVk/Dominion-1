@@ -12,37 +12,31 @@ public class Deck {
 		currentHand = new ArrayList();
 		allCards = new ArrayList();
 		initTestCards();
-		
-		//Add Cards to currentDeck -- Testing purposes
-		for(int i=0;i<=6;i++){
-			currentDeck.add(allCards.get(i));
-		}
-		
-		drawCard(5);
 	}
 	
-	public void addCard(String cardName){
+	public void addCardToDeck(String cardName){
+		// TODO check if card was found
 		int itemPosistion = findArrayPosition(cardName);
 		currentDeck.add(allCards.get(itemPosistion));	
 	}
 	
 	public void drawCard(int numberOfCards){
-		
 		int deckSize = currentDeck.size() -1;
 		int min = deckSize-numberOfCards;
 		
-		//for(int i=currentDeck.size(); i<numberOfCards; i--){   --> wrong?
 		for(int i=deckSize; i>min; i--){
 			Card drawnCard = currentDeck.get(i);
+			currentDeck.remove(i);
 			currentHand.add(drawnCard);
+			System.out.println(drawnCard.getName());
 		}
 	}
 	
-	private void shuffleDeck(){
+	public void shuffleDeck(){
 		Collections.shuffle(currentDeck);
 	}
 	
-	public int findArrayPosition(String cardName){ // TODO check if card exists
+	private int findArrayPosition(String cardName){
 		int counter = 0;
 		for (Card value : allCards) {
 			if(value.getName() == cardName){
@@ -73,7 +67,7 @@ public class Deck {
 		
 		//victory cards
 		Card estate = new Card(14,"estate",0,"",2);
-		Card dutchy = new Card(15,"dutcht",0,"",5);
+		Card dutchy = new Card(15,"dutchy",0,"",5);
 		Card province = new Card(16,"province",0,"",8);
 		
 		allCards.add(cellar);
@@ -93,8 +87,5 @@ public class Deck {
 		allCards.add(estate);
 		allCards.add(dutchy);
 		allCards.add(province);
-		
-		
-		
 	}
 }
