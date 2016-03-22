@@ -1,14 +1,16 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Deck {
 	private ArrayList<Card> currentDeck;
-	private Hand currentHand;
+	private ArrayList<Card> currentHand;
 	private ArrayList<Card> allCards;
 	
 	public Deck(){
 		currentDeck = new ArrayList();
-		currentHand = new Hand();
+		currentHand = new ArrayList();
 		allCards = new ArrayList();
+		drawCard(5);
 		initTestCards();
 	}
 	
@@ -16,7 +18,15 @@ public class Deck {
 		
 	}
 	
-	public void initTestCards(){
+	public void drawCard(int numberOfCards){
+		
+	}
+	
+	private void shuffleDeck(){
+		Collections.shuffle(currentDeck);
+	}
+	
+	private void initTestCards(){
 		//Card name = new Card(id, name, description, cost);
 		Card cellar = new Card(1,"cellar",1,"Discard any number of cards. +1 Card per card discarded.",2);
 		Card market = new Card(2,"market",1,"",5);
