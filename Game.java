@@ -23,7 +23,7 @@ public class Game {
 			for(int j=0; j<7; j++){
 				players[i].addCard("moat");
 			}
-			for(int k=0; k<7; k++){
+			for(int k=0; k<3; k++){
 				players[i].addCard("cellar");
 			}
 		}

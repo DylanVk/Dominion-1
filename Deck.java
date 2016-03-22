@@ -19,6 +19,8 @@ public class Deck {
 		//currentDeck.add(cardName);findArrayPosition(cardName);
 		int pos = findArrayPosition(cardName);
 		currentDeck.add(allCards.get(pos));
+		int itemPosistion = findArrayPosition(cardName);
+		currentDeck.add(allCards.get(itemPosistion));
 	}
 	
 	public void drawCard(int numberOfCards){
@@ -29,17 +31,15 @@ public class Deck {
 		Collections.shuffle(currentDeck);
 	}
 	
-	public int findArrayPosition(String cardName){
-		int position = 0;
+	public int findArrayPosition(String cardName){ // TODO check if card exists
 		int counter = 0;
 		for (Card value : allCards) {
 			if(value.getName() == cardName){
-				return counter;
-				
+				return counter;				
 			}
 			counter++;		
 		}
-		return counter;
+		return -1;
 	}
 	
 	public void initTestCards(){
