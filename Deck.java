@@ -1,17 +1,19 @@
 import java.util.ArrayList;
 
 public class Deck {
-	private ArrayList currentDeck;
+	private ArrayList<Card> currentDeck;
+	private Hand currentHand;
 	private ArrayList<Card> allCards;
 	
 	public Deck(){
 		currentDeck = new ArrayList();
+		currentHand = new Hand();
 		allCards = new ArrayList();
 		initTestCards();
 	}
 	
 	public void addCard(String cardName){
-		currentDeck.add(cardName);
+		
 	}
 	
 	public void initTestCards(){
@@ -36,7 +38,5 @@ public class Deck {
 		allCards.add(village);
 		allCards.add(woodcutter);
 		allCards.add(workshop);
-		
-		
 	}
 }
