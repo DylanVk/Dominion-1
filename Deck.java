@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+
 public class Deck {
 	private ArrayList<Card> currentDeck;
 	private ArrayList<Card> allCards;
