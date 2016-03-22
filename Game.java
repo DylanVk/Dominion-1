@@ -21,10 +21,10 @@ public class Game {
 		//add starting decks to their respective players
 		for(int i=0;i<players.length;i++){
 			for(int j=0; j<7; j++){
-				players[i].addCard("copper");
+				players[i].addCard("moat");
 			}
 			for(int k=0; k<7; k++){
-				players[i].addCard("estate");
+				players[i].addCard("cellar");
 			}
 		}
 		

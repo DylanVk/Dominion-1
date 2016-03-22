@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Deck {
-	private ArrayList currentDeck;
+	private ArrayList<Card> currentDeck;
 	private ArrayList<Card> allCards;
 	
 	public Deck(){
@@ -11,7 +11,26 @@ public class Deck {
 	}
 	
 	public void addCard(String cardName){
-		currentDeck.add(cardName);
+		//currentDeck.add(cardName);findArrayPosition(cardName);
+		int pos = findArrayPosition(cardName);
+		currentDeck.add(allCards.get(pos));
+		
+		for (Card card : currentDeck) {
+			System.out.println(card.getName());
+		}
+	}
+	
+	public int findArrayPosition(String cardName){
+		int position = 0;
+		int counter = 0;
+		for (Card value : allCards) {
+			if(value.getName() == cardName){
+				return counter;
+				
+			}
+			counter++;		
+		}
+		return counter;
 	}
 	
 	public void initTestCards(){
