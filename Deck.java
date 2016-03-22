@@ -14,10 +14,7 @@ public class Deck {
 		//currentDeck.add(cardName);findArrayPosition(cardName);
 		int pos = findArrayPosition(cardName);
 		currentDeck.add(allCards.get(pos));
-		
-		for (Card card : currentDeck) {
-			System.out.println(card.getName());
-		}
+
 	}
 	
 	public int findArrayPosition(String cardName){
