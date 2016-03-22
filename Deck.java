@@ -22,7 +22,10 @@ public class Deck {
 	}
 	
 	public void drawCard(int numberOfCards){
-		
+		for(int i=currentDeck.size(); i<numberOfCards; i--){
+			Card drawnCard = currentDeck.get(i);
+			currentHand.add(drawnCard);
+		}
 	}
 	
 	private void shuffleDeck(){
