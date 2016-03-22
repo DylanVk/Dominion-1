@@ -2,9 +2,11 @@ import java.util.ArrayList;
 
 public class Deck {
 	private ArrayList currentDeck;
+	private ArrayList<Card> allCards;
 	
 	public Deck(){
 		currentDeck = new ArrayList();
+		allCards = new ArrayList();
 		initTestCards();
 	}
 	
@@ -23,6 +25,18 @@ public class Deck {
 		Card smithy = new Card(7,"smithy",1,"",4);
 		Card village = new Card(8,"village",1,"",3);
 		Card woodcutter = new Card(9,"woodcutter",1,"",3);
-		Card workshop = new Card(10,"workshop",1,"Gain a card costing up to 4 Coins.",3);
+		Card workshop = new Card(10,"workshop",1,"Gain a card costing up to 4 Coins.",3);	
+		allCards.add(cellar);
+		allCards.add(market);
+		allCards.add(militia);
+		allCards.add(mine);
+		allCards.add(moat);
+		allCards.add(remodel);
+		allCards.add(smithy);
+		allCards.add(village);
+		allCards.add(woodcutter);
+		allCards.add(workshop);
+		
+		
 	}
 }
