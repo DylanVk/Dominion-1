@@ -28,7 +28,6 @@ public class Game {
 			}
 			players[i].shuffleDeck();
 			players[i].drawCard(5);
-			
 		}
 		
 		players[0].getVictoryPoints();

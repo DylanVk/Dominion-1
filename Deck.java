@@ -16,9 +16,7 @@ public class Deck {
 		currentHand = new ArrayList<Card>();
 		allCards = new ArrayList<Card>();
 		initTestCards();
-		
 	}	
-
 	
 	private void setCoinsInHand(){
 		int coinCounter = 0;
@@ -27,7 +25,6 @@ public class Deck {
 				coinCounter+=card.getValue();
 			}
 		}
-		
 		this.coinsInHand = coinCounter;
 	}
 	
@@ -65,18 +62,17 @@ public class Deck {
 	}
 	
 	public void drawCard(int numberOfCards){
-		int deckSize = currentDeck.size();
-		if(isEmpty(currentDeck)){
-			resetDiscardPile();
-			deckSize = currentDeck.size();
-		}
-		int min = deckSize-numberOfCards;
-		
 		//deckSize - 1 to use with ArrayList indexes
-		for(int i=deckSize - 1; i>min; i--){
-			Card drawnCard = currentDeck.get(i);
-			currentDeck.remove(i);
+		int topCard = currentDeck.size() - 1;
+		while(numberOfCards > 0){
+			if(currentDeck.isEmpty()){
+				resetDiscardPile();
+			}
+			topCard = currentDeck.size() - 1;
+			Card drawnCard = currentDeck.get(topCard);
+			currentDeck.remove(topCard);
 			currentHand.add(drawnCard);
+			numberOfCards--;
 		}
 	}
 	
@@ -99,13 +95,6 @@ public class Deck {
 	
 	public void shuffleDeck(){
 		Collections.shuffle(currentDeck);
-	}
-	
-	private Boolean isEmpty(ArrayList listToCheck){
-		if(listToCheck.size() == 0) {
-			return true;
-		}
-		return false;
 	}
 	
 	private int findPositionInArray(String cardName){
