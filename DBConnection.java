@@ -2,12 +2,12 @@
 import java.sql.* ;  // for standard JDBC programs
 
 public class DBConnection {
-	String url = "jdbc:mysql://185.13.227.167:3306/michiai147_domin";
-	String user = "michiai147_domin";
-	String pass = "projdominion2016";
-	Statement stmnt;
-	ResultSet resultset;
-	Connection connection;
+	private String url = "jdbc:mysql://185.13.227.167:3306/michiai147_domin";
+	private String user = "michiai147_domin";
+	private String pass = "projdominion2016";
+	private Statement stmnt;
+	private ResultSet resultset;
+	private Connection connection;
 	
 	public DBConnection() throws SQLException {
 		connectDB();
@@ -18,18 +18,31 @@ public class DBConnection {
 		connection = DriverManager.getConnection(url, user, pass);
 		
 		stmnt = connection.createStatement();
-		resultset = stmnt.executeQuery("SELECT * FROM Cards");
 		
-		showResults(resultset);
+		
 	}
 	
-	private void showResults(ResultSet result) throws SQLException {
+	public void showResults(ResultSet result) throws SQLException {
 		while(result.next())
 		{
 			String cardName = result.getString("Card Name");
-			System.out.println(cardName);
+			String setname = result.getString("SetName");
+			System.out.println(cardName + " ==> " + setname);
 			
 		}
 	}
+	
+	public ResultSet getCardInfo(String card) throws SQLException
+	{
+		resultset = stmnt.executeQuery("SELECT `Card Name`, SetName "
+									 + "FROM `Cards` "
+									 + "JOIN CardSets ON Cards.SetID = CardSets.SetID "
+									 + "WHERE `Card Name` = '" + card + "'");
+		
+		//showResults(resultset);
+		return resultset;
+		
+	}
+
 	
 }
