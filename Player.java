@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class Player {
 	private Deck currentDeck;
@@ -18,6 +19,10 @@ public class Player {
 		}
 	}
 	
+	//public ArrayList<Card> getTrashPlayer(){
+		
+		//return thisTurn.getTrashThisTurn();
+	//}
 
 	public void startTurn() {
 		thisTurn = new Turn(currentDeck);
