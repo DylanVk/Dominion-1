@@ -5,6 +5,7 @@ import java.util.Collections;
 public class Deck {
 	private ArrayList<Card> currentDeck;
 	private ArrayList<Card> currentHand;
+	private ArrayList<Card> discardPile;
 	private ArrayList<Card> allCards;
 	
 	public Deck(){
@@ -48,8 +49,18 @@ public class Deck {
 			Card drawnCard = currentDeck.get(i);
 			currentDeck.remove(i);
 			currentHand.add(drawnCard);
-			//System.out.println(drawnCard.getName());
 		}
+	}
+	
+	private void discardHand(){
+		for (Card toDiscard : currentHand) {
+			discardPile.add(toDiscard);
+		}
+		currentHand.clear();
+	}
+	
+	private void pickDiscards(int numberOfCards){
+		
 	}
 	
 	public void shuffleDeck(){
