@@ -36,7 +36,7 @@ public class TestServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.setContentType("text/html");
 	    response.setCharacterEncoding("utf-8");
-
+	    //init new Game?
 	    PrintWriter out = response.getWriter();
 	    out.println("hoera");
 	   
