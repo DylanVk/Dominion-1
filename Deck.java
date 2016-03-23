@@ -16,9 +16,7 @@ public class Deck {
 		currentHand = new ArrayList<Card>();
 		allCards = new ArrayList<Card>();
 		initTestCards();
-		
 	}	
-
 	
 	private void setCoinsInHand(){
 		int coinCounter = 0;
@@ -27,7 +25,6 @@ public class Deck {
 				coinCounter+=card.getValue();
 			}
 		}
-		
 		this.coinsInHand = coinCounter;
 	}
 	
@@ -65,13 +62,17 @@ public class Deck {
 	}
 	
 	public void drawCard(int numberOfCards){
-		int deckSize = currentDeck.size() -1;
-		int min = deckSize-numberOfCards;
-		
-		for(int i=deckSize; i>min; i--){
-			Card drawnCard = currentDeck.get(i);
-			currentDeck.remove(i);
+		//deckSize - 1 to use with ArrayList indexes
+		int topCard = currentDeck.size() - 1;
+		while(numberOfCards > 0){
+			if(currentDeck.isEmpty()){
+				resetDiscardPile();
+			}
+			topCard = currentDeck.size() - 1;
+			Card drawnCard = currentDeck.get(topCard);
+			currentDeck.remove(topCard);
 			currentHand.add(drawnCard);
+			numberOfCards--;
 		}
 	}
 	
@@ -84,6 +85,12 @@ public class Deck {
 	
 	private void pickDiscards(int numberOfCards){
 		
+	}
+	
+	private void resetDiscardPile(){
+		currentDeck = discardPile;
+		discardPile.clear();
+		shuffleDeck();
 	}
 	
 	public void shuffleDeck(){
