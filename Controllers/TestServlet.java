@@ -1,4 +1,6 @@
+package default package;
 package Controllers;
+
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -29,6 +31,7 @@ public class TestServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		System.out.println("hoi, ik kom van jquery");
 	    response.addHeader("Access-Control-Allow-Origin", "*");
 		// TODO Auto-generated method stub
 		response.setContentType("text/html");
