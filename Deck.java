@@ -42,10 +42,15 @@ public class Deck {
 	}
 	
 	public void drawCard(int numberOfCards){
-		int deckSize = currentDeck.size() -1;
+		int deckSize = currentDeck.size();
+		if(isEmpty(currentDeck)){
+			resetDiscardPile();
+			deckSize = currentDeck.size();
+		}
 		int min = deckSize-numberOfCards;
 		
-		for(int i=deckSize; i>min; i--){
+		//deckSize - 1 to use with ArrayList indexes
+		for(int i=deckSize - 1; i>min; i--){
 			Card drawnCard = currentDeck.get(i);
 			currentDeck.remove(i);
 			currentHand.add(drawnCard);
@@ -63,8 +68,21 @@ public class Deck {
 		
 	}
 	
+	private void resetDiscardPile(){
+		currentDeck = discardPile;
+		discardPile.clear();
+		shuffleDeck();
+	}
+	
 	public void shuffleDeck(){
 		Collections.shuffle(currentDeck);
+	}
+	
+	private Boolean isEmpty(ArrayList listToCheck){
+		if(listToCheck.size() == 0) {
+			return true;
+		}
+		return false;
 	}
 	
 	private int findPositionInArray(String cardName){
