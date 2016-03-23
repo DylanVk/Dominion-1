@@ -28,7 +28,11 @@ public class Game {
 			}
 			players[i].shuffleDeck();
 			players[i].drawCard(5);
+			
 		}
+		
+		System.out.println(players[0].getNumberOf(0));
+		System.out.println(players[0].getNumberOf(1));
 		
 	}
 	
