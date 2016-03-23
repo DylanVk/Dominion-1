@@ -8,5 +8,4 @@ public class Main {
 		//connect.showResults(connect.getCardInfo("Smithy"));
 		connect.showResults(connect.getCardInfo());
 	}
-
 }
