@@ -31,7 +31,6 @@ public class Game {
 			
 		}
 		
-		players[0].getVictoryPoints();
 		
 	}
 	
