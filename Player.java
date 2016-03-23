@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class Player {
 	private Deck currentDeck;
@@ -16,8 +17,17 @@ public class Player {
 		for (int k = 0; k < 3; k++) {
 			currentDeck.addCard("estate");
 		}
+		firstTurn();
 	}
 	
+	//public ArrayList<Card> getTrashPlayer(){
+		
+		//return thisTurn.getTrashThisTurn();
+	//}
+	public void firstTurn(){
+		thisTurn = new Turn(currentDeck);
+		thisTurn.shufflePile();
+	}
 
 	public void startTurn() {
 		thisTurn = new Turn(currentDeck);

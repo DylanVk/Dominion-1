@@ -11,5 +11,4 @@ public class Main {
 			//connect.showResults(connect.getCardInfo());
 			connect.showResults(connect.getCardType("Duchy"));
 	}
-
 }

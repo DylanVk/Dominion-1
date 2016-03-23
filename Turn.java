@@ -6,7 +6,8 @@ public class Turn {
 	private ArrayList<Card> drawPile;
 	private ArrayList<Card> currentHand;
 	private ArrayList<Card> discardPile;
-	
+	//private ArrayList<Card> trashAddedThisTurn;
+
 	public Turn(Deck currentDeck) {
 		this.currentDeck = currentDeck;
 		this.drawPile = currentDeck.getCardsOnDrawPile();
@@ -17,6 +18,11 @@ public class Turn {
 	private void pickDiscards(int numberOfCards) {
 
 	}
+
+	//public ArrayList<Card> getTrashThisTurn() {
+
+		//return trashAddedThisTurn;
+	//}
 
 	public void discardHand() {
 		for (Card toDiscard : currentHand) {
