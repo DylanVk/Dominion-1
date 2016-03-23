@@ -1,0 +1,33 @@
+/*---------------------*/
+/*    HTML ELEMENTS    */
+/*---------------------*/
+
+body {
+    font-family: Georgia, Cambria, Times, serif;
+    font-size: 1rem;
+    background-color: #FFFFFF;
+    color: #444444;
+}
+
+/*---------------------*/
+/*  REUSABLE CLASSES   */
+/*---------------------*/
+
+.cf:before, .cf:after {
+    content: "";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+/*---------------------*/
+/* CONTAINING ELEMENTS */
+/*---------------------*/
+
+/*------------------------*/
+/* PAGE SPECIFIC ELEMENTS */
+/*------------------------*/
+
+/* --- Home --- */
