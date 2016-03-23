@@ -17,6 +17,11 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Dominion stuff to ignore
+.settings/
+build/
+.classpath
+.project
 # =========================
 # Operating System Files
 # =========================
