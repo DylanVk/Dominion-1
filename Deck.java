@@ -8,32 +8,55 @@ public class Deck {
 	private ArrayList<Card> discardPile;
 	private ArrayList<Card> allCards;
 	
+	private int victoryPoints;
+	private int coinsInHand;
+	
 	public Deck(){
 		currentDeck = new ArrayList<Card>();
 		currentHand = new ArrayList<Card>();
 		allCards = new ArrayList<Card>();
 		initTestCards();
 		
+	}	
+
+	
+	private void setCoinsInHand(){
+		int coinCounter = 0;
+		for (Card card : currentHand) {
+			if(card.getType() == 0){
+				coinCounter+=card.getValue();
+			}
+		}
+		
+		this.coinsInHand = coinCounter;
 	}
 	
-	public int getNumberOf(int type){
-		int typeCounter = 0;
+	private void setVictoryPoints(){
+		int victoryCounter = 0;
 		for (Card card : currentDeck) {
-			if(card.getType() == type){
-				typeCounter+=card.getValue();
+			if(card.getType() == 1){
+				victoryCounter+=card.getValue();
 			}
 		}
 		for (Card card : currentHand) {
-			if(card.getType() == type){
-				typeCounter+=card.getValue();
+			if(card.getType() == 1){
+				victoryCounter+=card.getValue();
 			}
 		}
-		return typeCounter;
+		
+		this.victoryPoints = victoryCounter;
 	}
 	
-	private int getNumberOfCoins(){
-		return 0;
+	public int getVictoryPoints(){
+		setVictoryPoints();
+		return this.victoryPoints;
 	}
+	
+	public int getCoinsInHand(){
+		setCoinsInHand();
+		return this.coinsInHand;
+	}
+
 	
 	public void addCardToDeck(String cardName){
 		// TODO check if card was found

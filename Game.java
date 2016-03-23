@@ -31,8 +31,7 @@ public class Game {
 			
 		}
 		
-		System.out.println(players[0].getNumberOf(0));
-		System.out.println(players[0].getNumberOf(1));
+		players[0].getVictoryPoints();
 		
 	}
 	
