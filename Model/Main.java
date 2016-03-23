@@ -1,3 +1,4 @@
+package Model;
 import java.sql.SQLException;
 
 public class Main {

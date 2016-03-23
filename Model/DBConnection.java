@@ -1,3 +1,4 @@
+package Model;
 
 import java.sql.*; // for standard JDBC programs
 import java.util.*;
