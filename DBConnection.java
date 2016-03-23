@@ -37,28 +37,35 @@ public class DBConnection {
 		}
 	}
 	
-	public ResultSet getCardInfo(String card) throws SQLException
+	private void setCardInfo(String card) throws SQLException
 	{
-		resultset = stmnt.executeQuery("SELECT CardID,`Card Name`, SetName, Type, Cost, `Function` " 
+		this.resultset = stmnt.executeQuery("SELECT CardID,`Card Name`, SetName, Type, Cost, `Function` " 
 									 + "FROM `Cards` "
 									 + "JOIN CardSets ON Cards.SetID = CardSets.SetID "
 								     + "JOIN CardTypes ON Cards.TypeID = CardTypes.TypeID "
 								     
 									 + "WHERE `Card Name` = '" + card + "'");
 		
-		//showResults(resultset);
+	}
+	
+	private void setCardInfo() throws SQLException
+	{
+		this.resultset = stmnt.executeQuery("SELECT CardID,`Card Name`, SetName, Type, Cost, `Function` " 
+									 + "FROM `Cards` "
+									 + "JOIN CardSets ON Cards.SetID = CardSets.SetID "
+								     + "JOIN CardTypes ON Cards.TypeID = CardTypes.TypeID ORDER BY CardID");
+	}
+	
+	public ResultSet getCardInfo(String card) throws SQLException
+	{
+		setCardInfo(card);
 		return resultset;
 		
 	}
 	
 	public ResultSet getCardInfo() throws SQLException
 	{
-		resultset = stmnt.executeQuery("SELECT CardID,`Card Name`, SetName, Type, Cost, `Function` " 
-									 + "FROM `Cards` "
-									 + "JOIN CardSets ON Cards.SetID = CardSets.SetID "
-								     + "JOIN CardTypes ON Cards.TypeID = CardTypes.TypeID");
-		
-		//showResults(resultset);
+		setCardInfo();
 		return resultset;
 		
 	}

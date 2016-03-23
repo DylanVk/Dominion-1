@@ -6,7 +6,7 @@ public class Main {
 		Game g1 = new Game(2);
 		DBConnection connect = new DBConnection();
 		//connect.showResults(connect.getCardInfo("Smithy"));
-		//connect.showResults(connect.getCardInfo());
+		connect.showResults(connect.getCardInfo());
 	}
 
 }
