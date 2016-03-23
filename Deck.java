@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
-
+// getNumberOf(String typeOfCard)
 
 public class Deck {
 	private ArrayList<Card> currentDeck;
@@ -8,15 +8,19 @@ public class Deck {
 	private ArrayList<Card> allCards;
 	
 	public Deck(){
-		currentDeck = new ArrayList();
-		currentHand = new ArrayList();
-		allCards = new ArrayList();
+		currentDeck = new ArrayList<Card>();
+		currentHand = new ArrayList<Card>();
+		allCards = new ArrayList<Card>();
 		initTestCards();
+	}
+	
+	private int getNumberOf(String typeOfCard){
+		return 0;
 	}
 	
 	public void addCardToDeck(String cardName){
 		// TODO check if card was found
-		int itemPosistion = findArrayPosition(cardName);
+		int itemPosistion = findPositionInArray(cardName);
 		currentDeck.add(allCards.get(itemPosistion));	
 	}
 	
@@ -28,7 +32,7 @@ public class Deck {
 			Card drawnCard = currentDeck.get(i);
 			currentDeck.remove(i);
 			currentHand.add(drawnCard);
-			System.out.println(drawnCard.getName());
+			//System.out.println(drawnCard.getName());
 		}
 	}
 	
@@ -36,7 +40,7 @@ public class Deck {
 		Collections.shuffle(currentDeck);
 	}
 	
-	private int findArrayPosition(String cardName){
+	private int findPositionInArray(String cardName){
 		int counter = 0;
 		for (Card value : allCards) {
 			if(value.getName() == cardName){
@@ -47,7 +51,7 @@ public class Deck {
 		return -1;
 	}
 	
-	public void initTestCards(){
+	private void initTestCards(){
 		//Card name = new Card(id, name, description, cost);
 		Card cellar = new Card(1,"cellar",1,"Discard any number of cards. +1 Card per card discarded.",2);
 		Card market = new Card(2,"market",1,"",5);
