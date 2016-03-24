@@ -2,11 +2,15 @@
 /*    HTML ELEMENTS    */
 /*---------------------*/
 
+html, body {
+	height: 100%;
+}
+
 body {
     font-family: Georgia, Cambria, Times, serif;
     font-size: 1rem;
-    background-color: #FFFFFF;
-    color: #444444;
+    background-color: #000;
+    color: #fff;
 }
 
 /*---------------------*/
@@ -25,6 +29,37 @@ body {
 /*---------------------*/
 /* CONTAINING ELEMENTS */
 /*---------------------*/
+
+#container {
+	height: 100%;
+	padding: 1%;
+	background-color: #000;
+	margin: 0 auto;
+}
+
+#container > div {
+	float: left;	
+}
+
+#cardCloseUp{
+	height: 40%;
+	width: 12%;
+	border: 3px solid #fff;
+}
+
+#actionPiles {
+	width: 60%;
+	height: 40%;
+	border: 3px solid #fff;
+	margin: 0 4%; /* CHANGE TO 5% after removing borders */
+}
+
+#VTwrapper {
+	width: 18%;
+	height: 40%;
+	border: 3px solid #fff;
+}
+
 
 /*------------------------*/
 /* PAGE SPECIFIC ELEMENTS */
