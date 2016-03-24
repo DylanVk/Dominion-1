@@ -16,25 +16,20 @@ public class DBConnection {
 	}
 
 	private void connectDB() throws SQLException {
-		// connection with database
 		connection = DriverManager.getConnection(url, user, pass);
-
 	}
 
 	public void showResults(ResultSet result) throws SQLException {
-
-		ArrayList<String> array = new ArrayList<>();
-		ResultSetMetaData metaData = result.getMetaData();
-		while (result.next()) {
-			for (int i = 1; i < metaData.getColumnCount() + 1; i++) {
-				array.add(result.getString(i));
-			}
-
-		}
-
-		for (String value : array)
-			System.out.println(value);
-
+		ArrayList<String> arrayData = new ArrayList<>();           
+	    ResultSetMetaData metaData = resultset.getMetaData();            
+            while(resultset.next()){
+                for(int i = 1; i < metaData.getColumnCount()+1; i++){
+                    arrayData.add(resultset.getString(i));
+                }
+            }
+            
+            for(String value : arrayData)
+                System.out.println(value);
 	}
 
 	private void setCardInfo(String card) throws SQLException {
@@ -52,7 +47,6 @@ public class DBConnection {
 		return resultset;
 
 	}
-
 
 	private void setCardType(String name) throws SQLException {
 		prepStatemnt = connection.prepareStatement("SELECT Type " 
@@ -76,10 +70,63 @@ public class DBConnection {
 		this.resultset = prepStatemnt.executeQuery();
 	}
 	
+	
 	public ResultSet getCardSet(String name) throws SQLException {
 		setCardSet(name);
 		return resultset;
 	}
+	
+	private void setAllActionCards() throws SQLException {
+		prepStatemnt = connection.prepareStatement("SELECT `Card Name` "
+												 + "FROM Cards "
+												 + "JOIN CardTypes ON Cards.TypeID = CardTypes.TypeID "
+												 + "WHERE Type LIKE 'action%'");
+		this.resultset = prepStatemnt.executeQuery();
+	}
+	
+	public ResultSet getAllActionCards() throws SQLException {
+		setAllActionCards();
+		return resultset;
+	}
+	
+	private void setCurseCard() throws SQLException {
+        prepStatemnt = connection.prepareStatement("Select CardID, `Card Name`, SetName, Type, Cost, `Function` "
+                + "FROM Cards "
+                + "JOIN CardTypes ON Cards.TypeID = CardTypes.TypeID "
+                + "JOIN CardSets ON Cards.SetID = CardSets.SetID "
+                + "WHERE Type = 'Curse'");
+        this.resultset = prepStatemnt.executeQuery();
+    }
+    
+    public ResultSet getCurseCard() throws SQLException{
+        setCurseCard();
+        return resultset;
+    }
+    
+    private void setCardFunction(String name) throws SQLException {
+        prepStatemnt = connection.prepareStatement("Select `Function` "
+								                 + "FROM Cards "
+								                 + "WHERE  `Card Name` = '" + name + "'");
+        this.resultset = prepStatemnt.executeQuery();
+    }
+    
+    public ResultSet getCardFunction(String name) throws SQLException {
+        setCardFunction(name);
+        return resultset;
+    }
+	
+    private void setCardCosts(String name) throws SQLException {
+    	prepStatemnt = connection.prepareStatement("SELECT Cost "
+    											 + "FROM Cards "
+    											 + "WHERE `Card Name` = '" + name + "'");
+    	this.resultset = prepStatemnt.executeQuery();
+    }
+    
+    public ResultSet getCardCosts(String name) throws SQLException {
+    	setCardCosts(name);
+    	return resultset;
+    }
+	
 
 	
 }

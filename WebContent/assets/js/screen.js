@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-    $("#getCard").on('click', requestCard);
+    initActionCards();
 });
 
 var requestCard = function(){
@@ -11,3 +11,11 @@ var requestCard = function(){
         alert(data);
     });
 };
+
+var initActionCards = function() {
+	var img = "<img src='images/masterpiece.jpg'>";
+	for (var i = 0; i < 5; i++) {
+		$("#topAction").append("<div>" + img + "</div>");
+		$("#bottomAction").append("<div>" + img + "</div>");
+	}
+}
