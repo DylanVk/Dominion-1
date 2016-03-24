@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="lblAvaterPlayer2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="lblPlayerName2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="350" max="-2" attributes="0"/>
+                      <Component id="lblAvaterPlayer3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="lblPlayerName3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="lblAvaterPlayer4" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="lblPlayerName4" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="lblAvaterPlayer1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="lblPlayerName1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="lblCoin2" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="254" max="-2" attributes="0"/>
+                                          <Component id="lblActionCard6" min="-2" pref="69" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="lblCoin1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="lblActionCard1" min="-2" pref="69" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Component id="lblCoin3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="lblCoins" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblBuys" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblActions" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="lblActionCard2" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                                      <Component id="lblActionCard3" min="-2" pref="69" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="lblActionCard4" min="-2" pref="69" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="lblActionCard5" min="-2" pref="69" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="lblActionCard7" min="-2" pref="69" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="lblActionCard8" min="-2" pref="69" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="lblPlayedCard1" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="lblPlayedCard2" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="lblActionCard9" min="-2" pref="69" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="lblActionCard10" min="-2" pref="69" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="lblPlayedCard3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="lblHand1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="lblHand2" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="lblHand3" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="lblHand4" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="lblHand5" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace pref="62" max="32767" attributes="0"/>
+                              <Component id="btnEndTurn" min="-2" pref="137" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblTrash" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="lblVPPoint4" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblVPPoint3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblVPPoint1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblVPPoint2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="btnResign" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnManual1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
+          </Group>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace pref="903" max="32767" attributes="0"/>
+                  <Component id="btnPlayTreasure1" min="-2" pref="137" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="240" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblPlayerName2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblAvaterPlayer2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblPlayerName3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblAvaterPlayer3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblPlayerName4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblAvaterPlayer4" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblActionCard2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblActionCard1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblActionCard3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblActionCard4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblActionCard5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblVPPoint1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblCoin1" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblActionCard6" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblActionCard7" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblActionCard8" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblActionCard9" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblActionCard10" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblVPPoint2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblCoin2" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="105" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblVPPoint3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblCoin3" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblVPPoint4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblPlayedCard1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblPlayedCard2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblPlayedCard3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblActions" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnEndTurn" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblBuys" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblCoins" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+              <Component id="lblTrash" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="111" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblHand1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblHand2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblHand3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblHand4" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblHand5" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnResign" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                  <Component id="btnManual1" alignment="3" min="-2" pref="34" max="-2" attributes="0"/>
+                  <Component id="lblPlayerName1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblAvaterPlayer1" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+          </Group>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace pref="789" max="32767" attributes="0"/>
+                  <Component id="btnPlayTreasure1" min="-2" pref="41" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="lblPlayerName2">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Player2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblAvaterPlayer2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Avatar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblPlayerName3">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Player3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblAvaterPlayer3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Avatar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblPlayerName4">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Player4"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblAvaterPlayer4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Avatar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblActionCard2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="lblActionCard"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblActionCard3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="lblActionCard"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblActionCard4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="lblActionCard"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblActionCard5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="lblActionCard"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblActionCard6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="lblActionCard"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblActionCard7">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="lblActionCard"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblActionCard8">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="lblActionCard"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblActionCard9">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="lblActionCard"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblActionCard10">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="lblActionCard"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblActionCard1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="lblActionCard"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblVPPoint1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="lblVPPoint1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblVPPoint2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="lblVPPoint2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblVPPoint3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="lblVPPoint3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblVPPoint4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="lblVPPoint4"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblCoin1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="lblCoin1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblCoin2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="lblCoin2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblCoin3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="lblCoin3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblPlayedCard1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="lblPlayedCard1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblPlayedCard2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="lblPlayedCard2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblPlayedCard3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="lblPlayedCard3"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblTrash">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Trash"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnResign">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="X"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnManual1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="?"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblHand1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Hand1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblHand2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Hand1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblHand3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Hand1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblHand4">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Hand1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblHand5">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Hand1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblPlayerName1">
+      <Properties>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+          <Font name="Tahoma" size="14" style="0"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Player1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblAvaterPlayer1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Avatar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Actions:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Buys:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Coins:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblActions">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblBuys">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblCoins">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnEndTurn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="End Turn"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnPlayTreasure1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Play All Treasure"/>
+      </Properties>
+    </Component>
+  </SubComponents>
+</Form>
