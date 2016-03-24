@@ -8,8 +8,8 @@ public class Main {
 		DBConnection connect = new DBConnection();
 		
 		/* --- possible functions to get resultsets --- */
-			//connect.showResults(connect.getCardInfo("Smithy"));
-			//connect.showResults(connect.getCardInfo());
+			connect.showResults(connect.getCardInfo("Smithy"));
 			connect.showResults(connect.getCardType("Duchy"));
+			connect.showResults(connect.getCardSet("Duchy"));
 	}
 }

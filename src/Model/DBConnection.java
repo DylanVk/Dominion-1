@@ -7,9 +7,9 @@ public class DBConnection {
 	private String url = "jdbc:mysql://185.13.227.167:3306/michiai147_domin";
 	private String user = "michiai147_domin";
 	private String pass = "projdominion2016";
-	private Statement stmnt;
 	private ResultSet resultset;
 	private Connection connection;
+	private PreparedStatement prepStatemnt;
 
 	public DBConnection() throws SQLException {
 		connectDB();
@@ -19,45 +19,32 @@ public class DBConnection {
 		// connection with database
 		connection = DriverManager.getConnection(url, user, pass);
 
-		stmnt = connection.createStatement();
-
 	}
 
 	public void showResults(ResultSet result) throws SQLException {
 
-		ArrayList<String> rowValues = new ArrayList<String>();
+		ArrayList<String> array = new ArrayList<>();
 		ResultSetMetaData metaData = result.getMetaData();
-		// while (result.next()) {
-		// for (int i = 1; i < metaData.getColumnCount(); i++) {
-		// rowValues.add(result.getString(i));
-		// }
-		//
-		// }
-		//
-		// for (String data : rowValues) {
-		// System.out.println(data);
-		// }
-
-		String[][] array = new String[metaData.getColumnCount()][2];
-			for (int i = 0; i < array.length; i++) {
-				while(result.next()){
-					array[i][0] = result.getString(i);
-				}
+		while (result.next()) {
+			for (int i = 1; i < metaData.getColumnCount() + 1; i++) {
+				array.add(result.getString(i));
 			}
+
+		}
+
+		for (String value : array)
+			System.out.println(value);
 
 	}
 
 	private void setCardInfo(String card) throws SQLException {
-		this.resultset = stmnt.executeQuery("SELECT CardID,`Card Name`, SetName, Type, Cost, `Function` FROM `Cards` "
-				+ "JOIN CardSets ON Cards.SetID = CardSets.SetID "
-				+ "JOIN CardTypes ON Cards.TypeID = CardTypes.TypeID " + "WHERE `Card Name` = '" + card + "'");
+		prepStatemnt = connection.prepareStatement("SELECT CardID,`Card Name`, SetName, Type, Cost, `Function` "
+												 + "FROM `Cards` "
+												 + "JOIN CardSets ON Cards.SetID = CardSets.SetID "
+												 + "JOIN CardTypes ON Cards.TypeID = CardTypes.TypeID " 
+												 + "WHERE `Card Name` = '" + card + "'");
+		this.resultset = prepStatemnt.executeQuery();
 
-	}
-
-	private void setCardInfo() throws SQLException {
-		this.resultset = stmnt.executeQuery("SELECT CardID,`Card Name`, SetName, Type, Cost, `Function` "
-				+ "FROM `Cards` " + "JOIN CardSets ON Cards.SetID = CardSets.SetID "
-				+ "JOIN CardTypes ON Cards.TypeID = CardTypes.TypeID ORDER BY CardID");
 	}
 
 	public ResultSet getCardInfo(String card) throws SQLException {
@@ -66,20 +53,33 @@ public class DBConnection {
 
 	}
 
-	public ResultSet getCardInfo() throws SQLException {
-		setCardInfo();
-		return resultset;
-
-	}
 
 	private void setCardType(String name) throws SQLException {
-		this.resultset = stmnt.executeQuery("SELECT Type " + "FROM CardTypes "
-				+ "JOIN Cards ON CardTypes.TypeID = Cards.TypeID " + "WHERE `Card Name` = '" + name + "'");
+		prepStatemnt = connection.prepareStatement("SELECT Type " 
+											 	 + "FROM CardTypes "
+											 	 + "JOIN Cards ON CardTypes.TypeID = Cards.TypeID " 
+											 	 + "WHERE `Card Name` = '" + name + "'");
+		this.resultset = prepStatemnt.executeQuery();
 	}
 
 	public ResultSet getCardType(String name) throws SQLException {
 		setCardType(name);
 		return resultset;
 	}
+	
+	private void setCardSet(String name) throws SQLException {
+		prepStatemnt = connection.prepareStatement("SELECT SetName "
+										 		 + "FROM `Cards` "
+												 + "JOIN CardSets ON Cards.SetID = CardSets.SetID "
+												 + "WHERE `Card Name` = '" + name + "'");
+		
+		this.resultset = prepStatemnt.executeQuery();
+	}
+	
+	public ResultSet getCardSet(String name) throws SQLException {
+		setCardSet(name);
+		return resultset;
+	}
 
+	
 }
