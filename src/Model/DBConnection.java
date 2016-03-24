@@ -88,6 +88,45 @@ public class DBConnection {
 		setAllActionCards();
 		return resultset;
 	}
+	
+	private void setCurseCard() throws SQLException {
+        prepStatemnt = connection.prepareStatement("Select CardID, `Card Name`, SetName, Type, Cost, `Function` "
+                + "FROM Cards "
+                + "JOIN CardTypes ON Cards.TypeID = CardTypes.TypeID "
+                + "JOIN CardSets ON Cards.SetID = CardSets.SetID "
+                + "WHERE Type = 'Curse'");
+        this.resultset = prepStatemnt.executeQuery();
+    }
+    
+    public ResultSet getCurseCard() throws SQLException{
+        setCurseCard();
+        return resultset;
+    }
+    
+    private void setCardFunction(String name) throws SQLException {
+        prepStatemnt = connection.prepareStatement("Select `Function` "
+								                 + "FROM Cards "
+								                 + "WHERE  `Card Name` = '" + name + "'");
+        this.resultset = prepStatemnt.executeQuery();
+    }
+    
+    public ResultSet getCardFunction(String name) throws SQLException {
+        setCardFunction(name);
+        return resultset;
+    }
+	
+    private void setCardCosts(String name) throws SQLException {
+    	prepStatemnt = connection.prepareStatement("SELECT Cost "
+    											 + "FROM Cards "
+    											 + "WHERE `Card Name` = '" + name + "'");
+    	this.resultset = prepStatemnt.executeQuery();
+    }
+    
+    public ResultSet getCardCosts(String name) throws SQLException {
+    	setCardCosts(name);
+    	return resultset;
+    }
+	
 
 	
 }
