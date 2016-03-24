@@ -4,21 +4,25 @@
  * and open the template in the editor.
  */
 package JavaGUI;
+import javax.swing.JFrame;
+
+import java.awt.*;
 
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
+
 /**
  *
  * @author Matthias Carlier
  */
 public class Start extends javax.swing.JPanel {
 
+		
     /**
      * Creates new form Login
      */
     public Start() {
         initComponents();
+        
     }
 
     /**
@@ -104,17 +108,28 @@ public class Start extends javax.swing.JPanel {
 
     private void btnOnlineGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOnlineGameActionPerformed
         // TODO add your handling code here:
-    	
-    	 Login login = new Login();
-    	 login.setVisible(true);
+    	 JFrame f = new JFrame();
+         f.add(new Login());
+         f.pack();
+         f.setVisible(true);
+         
+         Window window = SwingUtilities.getWindowAncestor(this);
+         window.setVisible( false );
+    	 
     	
     }//GEN-LAST:event_btnOnlineGameActionPerformed
 
     private void btnLocalGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLocalGameActionPerformed
         // TODO add your handling code here:
+    	JFrame f = new JFrame();
+        f.add(new StartScreen());
+        f.pack();
+        f.setVisible(true);
+        
+        Window window = SwingUtilities.getWindowAncestor(this);
+        window.setVisible( false );
+       
     	
-    	StartScreen sc = new StartScreen();
-    	sc.setVisible(true);
     	
     }//GEN-LAST:event_btnLocalGameActionPerformed
 

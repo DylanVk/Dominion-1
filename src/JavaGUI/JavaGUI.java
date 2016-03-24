@@ -5,6 +5,7 @@
  */
 package JavaGUI;
 
+import javax.swing.JFrame;
 /**
  *
  * @author Matthias Carlier
@@ -17,9 +18,11 @@ public class JavaGUI {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Start start = new Start();
-        start.setVisible(true);
-        System.out.println("test");
+    	JFrame f = new JFrame();
+        f.add(new Start());
+        f.pack();
+        f.setVisible(true);
+        
     }
     
 }
