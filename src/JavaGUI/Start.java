@@ -5,6 +5,9 @@
  */
 package JavaGUI;
 
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
 /**
  *
  * @author Matthias Carlier
@@ -37,10 +40,12 @@ public class Start extends javax.swing.JPanel {
         lblLogo.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         lblLogo.setText("Dominion");
         lblLogo.setToolTipText("");
+        lblLogo.setVisible(true);
 
         btnOnlineGame.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnOnlineGame.setText("Online Game With Friends");
         btnOnlineGame.setPreferredSize(new java.awt.Dimension(366, 96));
+        btnOnlineGame.setVisible(true);
         btnOnlineGame.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOnlineGameActionPerformed(evt);
@@ -50,6 +55,7 @@ public class Start extends javax.swing.JPanel {
         btnLocalGame.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnLocalGame.setText("Local Game With Friends");
         btnLocalGame.setPreferredSize(new java.awt.Dimension(366, 96));
+        btnLocalGame.setVisible(true);
         btnLocalGame.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLocalGameActionPerformed(evt);
@@ -57,7 +63,8 @@ public class Start extends javax.swing.JPanel {
         });
 
         lblVersion.setText("Version: Alpha 0.1");
-
+        lblVersion.setVisible(true);
+        
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -91,14 +98,24 @@ public class Start extends javax.swing.JPanel {
                 .addComponent(lblVersion)
                 .addGap(32, 32, 32))
         );
+    
+        
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnOnlineGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOnlineGameActionPerformed
         // TODO add your handling code here:
+    	
+    	 Login login = new Login();
+    	 login.setVisible(true);
+    	
     }//GEN-LAST:event_btnOnlineGameActionPerformed
 
     private void btnLocalGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLocalGameActionPerformed
         // TODO add your handling code here:
+    	
+    	StartScreen sc = new StartScreen();
+    	sc.setVisible(true);
+    	
     }//GEN-LAST:event_btnLocalGameActionPerformed
 
 
