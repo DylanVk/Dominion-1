@@ -119,10 +119,16 @@ public class StartScreen extends javax.swing.JPanel {
 
     private void btnStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStartActionPerformed
         // TODO add your handling code here:
+    	GameSetup gs = new GameSetup();
+    	gs.setVisible(true);
+    	
     }//GEN-LAST:event_btnStartActionPerformed
 
     private void btnQuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuitActionPerformed
         // TODO add your handling code here:
+    	Start start = new Start();
+    	start.setVisible(true);
+    	
     }//GEN-LAST:event_btnQuitActionPerformed
 
 

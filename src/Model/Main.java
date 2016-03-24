@@ -7,11 +7,11 @@ public class Main {
 		Game g1 = new Game(2);
 		DBConnection connect = new DBConnection();
 		
-		/* --- possible functions to get resultsets --- */
-			//connect.showResults(connect.getCardInfo("Smithy"));
-			//connect.showResults(connect.getCardType("Duchy"));
-			//connect.showResults(connect.getCardSet("Duchy"));
-			//connect.getAllActionCards();
-			connect.showResults(connect.getCardCosts("Duchy"));
+		/* --- possible functions to get ArrayLists --- */
+			//connect.print(connect.getCardInfo("Smithy"));
+			//connect.print(connect.getCardType("Duchy"));
+			//connect.print(connect.getCardSet("Duchy"));
+			//connect.print(getAllActionCards());
+			connect.print(connect.getCardCosts("Duchy"));
 	}
 }
