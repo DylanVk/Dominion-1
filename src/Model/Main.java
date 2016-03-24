@@ -12,6 +12,6 @@ public class Main {
 			//connect.showResults(connect.getCardType("Duchy"));
 			//connect.showResults(connect.getCardSet("Duchy"));
 			//connect.getAllActionCards();
-			connect.showResults(connect.getCardCosts("Duchy"));
+			connect.print(connect.getCardCosts("Duchy"));
 	}
 }
