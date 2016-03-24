@@ -6,7 +6,7 @@ import java.util.*;
 public class DBConnection {
 	private String url = "jdbc:mysql://185.13.227.167:3306/michiai147_domin";
 	private String user = "michiai147_domin";
-	private String pass = "projdominion2016";
+	private String pass = "";
 	private ResultSet resultset;
 	private Connection connection;
 	private PreparedStatement prepStatemnt;
