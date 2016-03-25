@@ -5,6 +5,11 @@
  */
 package JavaGUI;
 
+import java.awt.Window;
+
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author Matthias Carlier
@@ -43,15 +48,30 @@ public class Login extends javax.swing.JPanel {
         lblSignIn.setText("Sign In");
         lblSignIn.setToolTipText("");
 
-        txtUsername.setText("Username");
+        txtUsername.setText("");
 
-        txtPassword.setText("Password");
+        txtPassword.setText("");
 
         btnSignIn.setText("Sign In");
+        btnSignIn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSignInActionPerformed(evt);
+            }
+        });
 
         btnRegister.setText("Sign Up");
+        btnRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegisterActionPerformed(evt);
+            }
+        });
 
         btnExit.setText("Go Back");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -93,6 +113,38 @@ public class Login extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        // TODO add your handling code here:
+    	JFrame f = new JFrame();
+        f.add(new Start());
+        f.pack();
+        f.setVisible(true);
+        
+        Window window = SwingUtilities.getWindowAncestor(this);
+        window.setVisible( false );
+    }                                       
+
+    private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {                                            
+        // TODO add your handling code here:
+    	JFrame f = new JFrame();
+        f.add(new Register());
+        f.pack();
+        f.setVisible(true);
+        
+        Window window = SwingUtilities.getWindowAncestor(this);
+        window.setVisible( false );
+    }  
+    
+    private void btnSignInActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        // TODO add your handling code here:
+    	JFrame f = new JFrame();
+        f.add(new StartScreen());
+        f.pack();
+        f.setVisible(true);
+        
+        Window window = SwingUtilities.getWindowAncestor(this);
+        window.setVisible( false );
+    } 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnExit;

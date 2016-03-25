@@ -5,6 +5,10 @@
  */
 package JavaGUI;
 
+import java.awt.Window;
+
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
 /**
  *
  * @author Matthias Carlier
@@ -78,6 +82,11 @@ public class Register extends javax.swing.JPanel {
         chkbox1.setText("I agree to the 'Terms & Conditions' & 'Privacy Police'");
 
         btnCancel.setText("Cancel");
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelActionPerformed(evt);
+            }
+        });
 
         panel1.setBackground(new java.awt.Color(153, 153, 153));
         panel1.setPreferredSize(new java.awt.Dimension(350, 2));
@@ -184,7 +193,25 @@ public class Register extends javax.swing.JPanel {
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
         // TODO add your handling code here:
+    	JFrame f = new JFrame();
+        f.add(new Login());
+        f.pack();
+        f.setVisible(true);
+        
+        Window window = SwingUtilities.getWindowAncestor(this);
+        window.setVisible( false );
     }//GEN-LAST:event_btnRegisterActionPerformed
+    
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        // TODO add your handling code here:
+    	JFrame f = new JFrame();
+        f.add(new Login());
+        f.pack();
+        f.setVisible(true);
+        
+        Window window = SwingUtilities.getWindowAncestor(this);
+        window.setVisible( false );
+    }  
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

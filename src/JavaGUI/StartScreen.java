@@ -5,6 +5,11 @@
  */
 package JavaGUI;
 
+import java.awt.Window;
+
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author Matthias Carlier
@@ -38,7 +43,12 @@ public class StartScreen extends javax.swing.JPanel {
         btnProfile.setText("Profile");
         btnProfile.setMinimumSize(new java.awt.Dimension(266, 23));
         btnProfile.setPreferredSize(new java.awt.Dimension(366, 48));
-
+        btnProfile.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnProfileActionPerformed(evt);
+            }
+        });
+        
         lblVersion.setText("Version: Alpha 0.1");
 
         lblLogo.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
@@ -50,6 +60,11 @@ public class StartScreen extends javax.swing.JPanel {
         btnHighscores.setText("Highscores");
         btnHighscores.setMinimumSize(new java.awt.Dimension(266, 23));
         btnHighscores.setPreferredSize(new java.awt.Dimension(366, 48));
+        btnHighscores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHighscoresActionPerformed(evt);
+            }
+        });
 
         btnStart.setText("Start");
         btnStart.setMinimumSize(new java.awt.Dimension(57, 23));
@@ -119,17 +134,49 @@ public class StartScreen extends javax.swing.JPanel {
 
     private void btnStartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStartActionPerformed
         // TODO add your handling code here:
-    	GameSetup gs = new GameSetup();
-    	gs.setVisible(true);
+    	JFrame f = new JFrame();
+        f.add(new GameSetup());
+        f.pack();
+        f.setVisible(true);
+        
+        Window window = SwingUtilities.getWindowAncestor(this);
+        window.setVisible( false );
     	
     }//GEN-LAST:event_btnStartActionPerformed
 
     private void btnQuitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnQuitActionPerformed
         // TODO add your handling code here:
-    	Start start = new Start();
-    	start.setVisible(true);
+    	JFrame f = new JFrame();
+        f.add(new Start());
+        f.pack();
+        f.setVisible(true);
+        
+        Window window = SwingUtilities.getWindowAncestor(this);
+        window.setVisible( false );
     	
     }//GEN-LAST:event_btnQuitActionPerformed
+    
+    private void btnProfileActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        // TODO add your handling code here:
+    	JFrame f = new JFrame();
+        f.add(new Profile());
+        f.pack();
+        f.setVisible(true);
+        
+        Window window = SwingUtilities.getWindowAncestor(this);
+        window.setVisible( false );
+    }    
+    
+    private void btnHighscoresActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        // TODO add your handling code here:
+    	JFrame f = new JFrame();
+        f.add(new Highscores());
+        f.pack();
+        f.setVisible(true);
+        
+        Window window = SwingUtilities.getWindowAncestor(this);
+        window.setVisible( false );
+    }    
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

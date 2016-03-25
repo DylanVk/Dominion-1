@@ -5,6 +5,11 @@
  */
 package JavaGUI;
 
+import java.awt.Window;
+
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author Matthias Carlier
@@ -58,6 +63,11 @@ public class Highscores extends javax.swing.JPanel {
 
         btnBack.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnBack.setText("Go Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -97,6 +107,16 @@ public class Highscores extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        // TODO add your handling code here:
+    	JFrame f = new JFrame();
+        f.add(new StartScreen());
+        f.pack();
+        f.setVisible(true);
+        
+        Window window = SwingUtilities.getWindowAncestor(this);
+        window.setVisible( false );
+    }   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
