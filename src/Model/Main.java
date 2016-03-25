@@ -8,10 +8,7 @@ public class Main {
 		DBConnection connect = new DBConnection();
 		
 		/* --- possible functions to get ArrayLists --- */
-			//connect.print(connect.getCardInfo("Smithy"));
-			//connect.print(connect.getCardType("Duchy"));
-			//connect.print(connect.getCardSet("Duchy"));
-			//connect.print(getAllActionCards());
-			connect.print(connect.getCardCosts("Duchy"));
+			//connect.getSelectQuery(tablename, columns, where-clause);
+			connect.print(connect.getSelectQuery("Cards", "*", "CardName='Duchy'"));
 	}
 }
